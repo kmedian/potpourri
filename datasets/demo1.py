@@ -7,9 +7,9 @@ import numpy as np
 tmp = load_breast_cancer()
 
 X_train, X_valid, Y_train, Y_valid = train_test_split(
-    minmax_scale(tmp.data, axis=0), 
-    tmp.target, 
-    test_size = 0.30, 
+    minmax_scale(tmp.data, axis=0),
+    tmp.target,
+    test_size = 0.30,
     random_state = 42
 )
 del tmp
@@ -22,10 +22,14 @@ meta = {
     "id": "demo1",
     "name": "Breast Cancer Wisconsin",
     "descriptions": (
-        "Demo dataset from sklearn. Binary output labels indicate cancer or not. " 
-        "Original input features are min-max transformed to ratio-scaled features."), 
-    "source": "https://scikit-learn.org/stable/modules/generated/sklearn.datasets.load_breast_cancer.html",
-    "keywords": ["demo dataset", "binary classification", "interval-scale features"],
+        "Demo dataset from sklearn. Binary output labels indicate cancer "
+        "or not. Original input features are min-max transformed to "
+        "ratio-scaled features."),
+    "source": (
+        "https://scikit-learn.org/stable/modules/generated/"
+        "sklearn.datasets.load_breast_cancer.html"),
+    "keywords": [
+        "demo dataset", "binary classification", "interval-scale features"],
     "sample_size": 569,
     "sample_train": len(Y_train),
     "sample_valid": len(Y_valid),

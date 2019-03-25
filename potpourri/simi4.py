@@ -7,16 +7,16 @@ import scipy.stats as ss
 model = Pipeline(steps=[
     ('scl', StandardScaler()),
     ('lin', ElasticNet(
-        fit_intercept = True, 
-        positive = False, 
+        fit_intercept = True,
+        positive = False,
         random_state = 42,
-        selection = 'random', 
-        precompute = True, 
-        tol = 0.0001, 
+        selection = 'random',
+        precompute = True,
+        tol = 0.0001,
         max_iter = 1000,
         warm_start = True,
         normalize = False,  # done in the pipeline
-        copy_X = True, 
+        copy_X = True,
     ))
 ])
 
@@ -26,9 +26,10 @@ hyper = {
 }
 
 meta = {
-    'id': "simi4", 
+    'id': "simi4",
     'name': 'LinReg ElasticNet',
-    'descriptions': 'ElasticNet Regression (L1/L2 penalty), Coordinate Descent solver.',
+    'descriptions': (
+        "ElasticNet Regression (L1/L2 penalty), Coordinate Descent solver."),
     'solver': 'Coordinate Descent',
     'active': True,
     'keywords': [

@@ -10,7 +10,7 @@ model = Pipeline(steps=[
         # Logistic Regression
         loss = 'squared_loss',
         penalty = 'l2',
-        #l1_ratio = 0,
+        # l1_ratio = 0,
         fit_intercept = True,
         # solver settings
         max_iter = 1000,
@@ -35,9 +35,10 @@ hyper = {
 }
 
 meta = {
-    'id': "simi11", 
+    'id': "simi11",
     'name': 'LinReg Ridge',
-    'descriptions': 'Ridge Regression (L2 penalty), SGD solver, squared loss function.',
+    'descriptions': (
+        "Ridge Regression (L2 penalty), SGD solver, squared loss function."),
     'solver': 'Stochastic Gradient Descent',
     'active': True,
     'keywords': [

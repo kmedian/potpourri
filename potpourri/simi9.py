@@ -9,10 +9,10 @@ model = Pipeline(steps=[
     ('lin', Ridge(
         solver = 'lsqr',
         tol = 0.001,  # optimizer termination criteria
-        #alpha = 1.0,  # L2 regulization alpha=C^{-1}
+        # alpha = 1.0,  # L2 regulization alpha=C^{-1}
         fit_intercept = True,
         normalize = False,  # done in the pipeline
-        copy_X = True, 
+        copy_X = True,
     ))
 ])
 
@@ -21,9 +21,11 @@ hyper = {
 }
 
 meta = {
-    'id': "simi9", 
+    'id': "simi9",
     'name': 'LinReg Ridge',
-    'descriptions': 'Ridge Regression (L2 penalty), Least-Square equations solver, standard-normal transformed features.',
+    'descriptions': (
+        "Ridge Regression (L2 penalty), Least-Square equations solver, "
+        "standard-normal transformed features."),
     'solver': 'Least Square',
     'active': True,
     'keywords': [

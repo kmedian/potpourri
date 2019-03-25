@@ -9,7 +9,7 @@ model = Pipeline(steps=[
     ('lin', LogisticRegression(
         penalty = 'l2',
         solver = 'newton-cg',
-        multi_class = 'ovr', # binary
+        multi_class = 'ovr',   # binary
         random_state = 42,
         fit_intercept = True,
         max_iter = 100,
@@ -19,11 +19,11 @@ model = Pipeline(steps=[
 
 hyper = {
     'lin__C': ss.gamma(a=2.5, loc=1e-5, scale=0.75),
-    #'lin__fit_intercept': [True, False]
+    # 'lin__fit_intercept': [True, False]
 }
 
 meta = {
-    'id': "sbmi59", 
+    'id': "sbmi59",
     'name': 'Logistic Ridge',
     'descriptions': 'Logistic Regression, L2 penalty (Ridge)',
     'solver': 'Newton-CG',

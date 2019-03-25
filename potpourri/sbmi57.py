@@ -32,11 +32,11 @@ model = Pipeline(steps=[
 
 hyper = {
     'lin__alpha': ss.expon(loc=1e-8, scale=.1),
-    #'lin__fit_intercept': [True, False]
+    # 'lin__fit_intercept': [True, False]
 }
 
 meta = {
-    'id': "sbmi57", 
+    'id': "sbmi57",
     'name': 'Logistic Lasso',
     'descriptions': 'Logistic Regression with L1 penalty (Lasso)',
     'solver': 'stochastic gradient descent',

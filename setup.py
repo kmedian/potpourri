@@ -6,17 +6,18 @@ def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
 
-setup(name='potpourri',
-      version='0.1.0',
-      description='model zoo of different preconfigured algorithms',
-      long_description=read('README.md'),
-      long_description_content_type='text/markdown',
-      url='http://github.com/kmedian/potpourri',
-      author='Ulf Hamster',
-      author_email='554c46@gmail.com',
-      license='MIT',
-      packages=['potpourri'],
-      install_requires=[
+setup(
+    name='potpourri',
+    version='0.1.0',
+    description='model zoo of different preconfigured algorithms',
+    long_description=read('README.md'),
+    long_description_content_type='text/markdown',
+    url='http://github.com/kmedian/potpourri',
+    author='Ulf Hamster',
+    author_email='554c46@gmail.com',
+    license='MIT',
+    packages=['potpourri'],
+    install_requires=[
         'setuptools>=40.0.0',
         'nose>=1.3.7',
         'numpy>=1.15.3',
@@ -29,6 +30,7 @@ setup(name='potpourri',
         'lightgbm>=2.2.2',
         'sklearn-lvq>=1.1.0',
         'umap-learn>=0.3.7',
-        'MulticoreTSNE>=0.0.1.1']
-      python_requires='>=3.6',
-      zip_safe=False)
+        'MulticoreTSNE>=0.0.1.1'],
+    python_requires='>=3.6',
+    zip_safe=False
+)

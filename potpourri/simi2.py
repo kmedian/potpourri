@@ -7,14 +7,14 @@ import scipy.stats as ss
 model = Pipeline(steps=[
     ('scl', StandardScaler()),
     ('lin', LassoLars(
-        fit_intercept=True, 
-        positive = False, 
-        precompute = True, 
+        fit_intercept=True,
+        positive = False,
+        precompute = True,
         eps = 2.220446049250313e-16,  # for ill-conditioned cholesky
-        max_iter = 500, 
+        max_iter = 500,
         normalize=True,
-        copy_X = True, 
-        fit_path = False,  # set to True for debugging to access "model.coef_path_" 
+        copy_X = True,
+        fit_path = False,  # set to True for debugging "model.coef_path_"
         verbose = False,  # for debugging
     ))
 ])
@@ -24,12 +24,13 @@ hyper = {
 }
 
 meta = {
-    'id': "simi2", 
+    'id': "simi2",
     'name': 'LinReg Lasso',
     'descriptions': 'Lasso Regression (L1 penalty), LARS solver.',
     'solver': 'Least Angle Regression (LARS)',
     'active': True,
-    'keywords': ['linear regression', 'univariate regression', 'multiple regression'],
+    'keywords': [
+        'linear regression', 'univariate regression', 'multiple regression'],
     'output_num': 'single',
     'output_scale': 'interval',
     'output_dtype': 'float',

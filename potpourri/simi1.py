@@ -7,16 +7,16 @@ import scipy.stats as ss
 model = Pipeline(steps=[
     ('scl', StandardScaler()),
     ('lin', Lasso(
-        fit_intercept = True, 
-        positive = False, 
+        fit_intercept = True,
+        positive = False,
         random_state = 42,
-        selection = 'random', 
-        precompute = True, 
-        tol = 0.0001, 
+        selection = 'random',
+        precompute = True,
+        tol = 0.0001,
         max_iter = 1000,
         warm_start = True,
         normalize = False,  # done in the pipeline
-        copy_X = True, 
+        copy_X = True,
     ))
 ])
 
@@ -25,12 +25,14 @@ hyper = {
 }
 
 meta = {
-    'id': "simi1", 
+    'id': "simi1",
     'name': 'LinReg Lasso',
-    'descriptions': 'Lasso Regression (L1 penalty), Coordinate Descent solver.',
+    'descriptions': (
+        "Lasso Regression (L1 penalty), Coordinate Descent solver."),
     'solver': 'Coordinate Descent',
     'active': True,
-    'keywords': ['linear regression', 'univariate regression', 'multiple regression'],
+    'keywords': [
+        'linear regression', 'univariate regression', 'multiple regression'],
     'output_num': 'single',
     'output_scale': 'interval',
     'output_dtype': 'float',

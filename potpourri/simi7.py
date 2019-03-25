@@ -9,10 +9,10 @@ model = Pipeline(steps=[
     ('lin', Ridge(
         solver = 'sag',
         tol = 0.001,  # optimizer termination criteria
-        #alpha = 1.0,  # L2 regulization alpha=C^{-1}
+        # alpha = 1.0,  # L2 regulization alpha=C^{-1}
         fit_intercept = True,
         normalize = False,  # done in the pipeline
-        copy_X = True, 
+        copy_X = True,
         random_state = 42,   # for SAG/SAGA solver
     ))
 ])
@@ -22,9 +22,11 @@ hyper = {
 }
 
 meta = {
-    'id': "simi7", 
+    'id': "simi7",
     'name': 'LinReg Ridge',
-    'descriptions': 'Ridge Regression (L2 penalty), SAG solver, standard-normal transformed features.',
+    'descriptions': (
+        "Ridge Regression (L2 penalty), SAG solver, standard-normal "
+        "transformed features."),
     'solver': 'Stochastic Average Gradient descent (SAG)',
     'active': True,
     'keywords': [

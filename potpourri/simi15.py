@@ -20,9 +20,11 @@ hyper = {
 }
 
 meta = {
-    'id': "simi15", 
+    'id': "simi15",
     'name': 'LinReg Huber',
-    'descriptions': 'Huber Regression, L-BFGS solver, standard-normal transformed features.',
+    'descriptions': (
+        "Huber Regression, L-BFGS solver, standard-normal transformed "
+        "features."),
     'solver': 'L-BFGS',
     'active': True,
     'keywords': [

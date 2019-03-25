@@ -22,7 +22,7 @@ def to_disk(model, fname, path="tmp", tech="joblib"):
     else:
         raise Exception("unknown tech='...' specified.")
     return None
-    
+
 
 def from_disk(fname, path="tmp", tech="joblib"):
     # add trailing slash
@@ -41,4 +41,3 @@ def from_disk(fname, path="tmp", tech="joblib"):
     # file does not exist
     warnings.warn("'{:s}' does not not exist.".format(filename))
     return None
-        

@@ -35,9 +35,11 @@ hyper = {
 }
 
 meta = {
-    'id': "simi3", 
+    'id': "simi3",
     'name': 'LinReg ElasticNet',
-    'descriptions': 'ElasticNet Regression (L1/L2 penalty), SGD solver, squared loss function.',
+    'descriptions': (
+        "ElasticNet Regression (L1/L2 penalty), SGD solver, "
+        "squared loss function."),
     'solver': 'Stochastic Gradient Descent',
     'active': True,
     'keywords': [

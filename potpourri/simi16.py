@@ -18,20 +18,21 @@ model = Pipeline(steps=[
 ])
 
 hyper = {
-    #'lin__epsilon': ss.uniform(1.0, 6.0),  # threshold for standardized error
-    #'lin__alpha': ss.gamma(a=1.5, loc=1e-5, scale=.7),  # alpha ~ [0.001, 10]
+    # 'lin__epsilon': ss.uniform(1.0, 6.0),  # threshold for standardized error
+    # 'lin__alpha': ss.gamma(a=1.5, loc=1e-5, scale=.7),  # alpha ~ [0.001, 10]
 }
 
 meta = {
-    'id': "simi16", 
+    'id': "simi16",
     'name': 'LinReg Theil-Sen',
-    'descriptions': 'Theil-Sen Regression, standard-normal transformed features.',
+    'descriptions': (
+        "Theil-Sen Regression, standard-normal transformed features."),
     'solver': 'L-BFGS',
     'active': True,
     'keywords': [
         'robust regression', 'univariate regression', 'multiple regression',
         'theil-sen regression', 'sklearn.linear_model.TheilSenRegressor',
-        'theil-sen estimator', 'sen slope estimator', 'slope selection', 
+        'theil-sen estimator', 'sen slope estimator', 'slope selection',
         'single-median method', 'kendall robust line-fit method',
         'kendall–theil robust line'],
     'output_num': 'single',

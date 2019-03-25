@@ -44,9 +44,10 @@ Check the [nbs](http://github.com/kmedian/potpourri/nbs) folder for notebooks.
 
 
 ## Commands
-* Check syntax: `flake8 --ignore=F401`
+* Check syntax: `flake8 --ignore=F401,E251`
 * Remove `.pyc` files: `find . -type f -name "*.pyc" | xargs rm`
 * Remove `__pycache__` folders: `find . -type d -name "__pycache__" | xargs rm -rf`
+* Remove Jupyter checkpoints: `find . -type d -name ".ipynb_checkpoints" | xargs rm -rf`
 * Upload to PyPi with twine: `python setup.py sdist && twine upload -r pypi dist/*`
 
 

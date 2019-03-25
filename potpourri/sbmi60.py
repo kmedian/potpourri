@@ -12,7 +12,7 @@ model = Pipeline(steps=[
         penalty = 'l2',
         l1_ratio = 0,
         fit_intercept = True,
-        class_weight = {0: 1, 1:1},  # enforce binary [0,1]
+        class_weight = {0: 1, 1: 1},  # enforce binary [0,1]
         # solver settings
         max_iter = 1000,
         tol = 1e-3,
@@ -32,19 +32,22 @@ model = Pipeline(steps=[
 ])
 
 hyper = {
-    #'lin__alpha': ss.expon(loc=1e-8, scale=.1),
-    #'lin__alpha': ss.uniform(1e-4, 1.1),   # C ~ [1/1.1, 10000]
-    #'lin__alpha': ss.gamma(a=2.2, loc=1e-5, scale=.7),  # alpha ~ [0.004, 9.8]
+    # 'lin__alpha': ss.expon(loc=1e-8, scale=.1),
+    # 'lin__alpha': ss.uniform(1e-4, 1.1),   # C ~ [1/1.1, 10000]
+    # 'lin__alpha': ss.gamma(a=2.2, loc=1e-5, scale=.7),  # alpha~[0.004, 9.8]
     'lin__alpha': ss.gamma(a=1.5, loc=1e-5, scale=.7),  # alpha ~ [0.001, 10]
 }
 
 meta = {
-    'id': "sbmi60", 
+    'id': "sbmi60",
     'name': 'Logistic Ridge',
-    'descriptions': 'Logistic Regression, L2 penalty (Ridge), SGD solver, standard-normal transformed features.',
+    'descriptions': (
+        "Logistic Regression, L2 penalty (Ridge), SGD solver, standard-normal "
+        "transformed features."),
     'solver': 'Stochastic Gradient Descent (SGD)',
     'active': True,
-    'keywords': ['binary classification', 'linear regression', 'SGDClassifier'],
+    'keywords': [
+        'binary classification', 'linear regression', 'SGDClassifier'],
     'output_num': 'single',
     'output_scale': 'binary',
     'output_dtype': 'bool',

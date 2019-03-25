@@ -19,11 +19,11 @@ model = Pipeline(steps=[
 
 hyper = {
     'lin__C': ss.gamma(a=2.2, loc=1e-3, scale=0.7),
-    #'lin__fit_intercept': [True, False]
+    # 'lin__fit_intercept': [True, False]
 }
 
 meta = {
-    'id': "sbmi1", 
+    'id': "sbmi1",
     'name': 'Logistic Lasso',
     'descriptions': 'Logistic Regression with L1 penalty (Lasso)',
     'solver': 'SAGA',

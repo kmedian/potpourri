@@ -9,11 +9,11 @@ model = Pipeline(steps=[
     ('lin', RidgeClassifier(
         solver = 'sparse_cg',
         tol = 0.001,  # optimizer termination criteria
-        #alpha = 1.0,  # L2 regulization alpha=C^{-1}
+        # alpha = 1.0,  # L2 regulization alpha=C^{-1}
         fit_intercept = True,
-        class_weight = {0: 1, 1:1},  # enforce binary [0,1] 
+        class_weight = {0: 1, 1: 1},  # enforce binary [0,1]
         normalize = False,  # done in the pipeline
-        copy_X = True, 
+        copy_X = True,
         max_iter = 1000,  # for CG solver
     ))
 ])
@@ -23,12 +23,16 @@ hyper = {
 }
 
 meta = {
-    'id': "sbmi95", 
+    'id': "sbmi95",
     'name': 'Logistic Ridge',
-    'descriptions': 'Logistic Regression, L2 penalty (Ridge), Conjugate Gradient solver, standard-normal transformed features.',
+    'descriptions': (
+        "Logistic Regression, L2 penalty (Ridge), Conjugate Gradient solver, "
+        "standard-normal transformed features."),
     'solver': 'Conjugate Gradient',
     'active': True,
-    'keywords': ['binary classification', 'linear regression', 'RidgeClassifier', 'scipy.sparse.linalg.cg'],
+    'keywords': [
+        'binary classification', 'linear regression', 'RidgeClassifier',
+        'scipy.sparse.linalg.cg'],
     'output_num': 'single',
     'output_scale': 'binary',
     'output_dtype': 'bool',

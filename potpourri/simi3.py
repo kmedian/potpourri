@@ -35,12 +35,14 @@ hyper = {
 }
 
 meta = {
-    'id': "simi3", 
+    'id': "simi3",
     'name': 'LinReg Lasso',
-    'descriptions': 'Lasso Regression (L1 penalty), SGD solver, squared loss function.',
+    'descriptions': (
+        "Lasso Regression (L1 penalty), SGD solver, squared loss function."),
     'solver': 'Stochastic Gradient Descent',
     'active': True,
-    'keywords': ['linear regression', 'univariate regression', 'multiple regression'],
+    'keywords': [
+        'linear regression', 'univariate regression', 'multiple regression'],
     'output_num': 'single',
     'output_scale': 'interval',
     'output_dtype': 'float',
