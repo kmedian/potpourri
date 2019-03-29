@@ -1,4 +1,5 @@
 from setuptools import setup
+# from setuptools import setup, find_packages
 
 
 def read(fname):
@@ -8,7 +9,7 @@ def read(fname):
 
 setup(
     name='potpourri',
-    version='0.1.0',
+    version='0.1.1',
     description='model zoo of different preconfigured algorithms',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
@@ -16,7 +17,8 @@ setup(
     author='Ulf Hamster',
     author_email='554c46@gmail.com',
     license='MIT',
-    packages=['potpourri'],
+    packages=['seasalt', 'datasets', 'verto', 'potpourri'],
+    # packages=find_packages(),
     install_requires=[
         'setuptools>=40.0.0',
         'nose>=1.3.7',

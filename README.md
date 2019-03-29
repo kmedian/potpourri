@@ -50,6 +50,9 @@ Check the [nbs](http://github.com/kmedian/potpourri/nbs) folder for notebooks.
 * Remove Jupyter checkpoints: `find . -type d -name ".ipynb_checkpoints" | xargs rm -rf`
 * Upload to PyPi with twine: `python setup.py sdist && twine upload -r pypi dist/*`
 
+Othe helpful commands
+
+* Find package folders: `python -c 'from setuptools import find_packages; print(find_packages())' `
 
 ## Support
 Please [open an issue](https://github.com/kmedian/potpourri/issues/new) for support.
