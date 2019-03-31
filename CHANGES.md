@@ -1,3 +1,7 @@
+# 0.1.4 / 2019-04-30
+
+  * Fix #2 -- pretty summary
+
 # 0.1.3 / 2019-03-30
 
   * Fix #3 -- verto.dim2 Pipeline wrapped into PcaMinka class
