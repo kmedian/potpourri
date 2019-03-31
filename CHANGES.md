@@ -1,3 +1,7 @@
+# 0.1.3 / 2019-03-30
+
+  * Fix #3 -- verto.dim2 Pipeline wrapped into PcaMinka class
+
 # 0.1.2 / 2019-03-30
 
   * Fix #1 -- "__repr__" and "__str__" method of verto.dim3.PcaEv aligned
