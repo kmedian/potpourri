@@ -1,3 +1,7 @@
+# 0.1.2 / 2019-03-30
+
+  * Fix #1 -- "__repr__" and "__str__" method of verto.dim3.PcaEv aligned
+
 # 0.1.1 / 2019-03-29
 
   * modules added in setup.py

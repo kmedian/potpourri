@@ -51,8 +51,11 @@ class PcaEV(Pipeline):
         ])
 
     def __str__(self):
-        return 'required_ev={}, steps={}, prefix={}'.format(
+        return 'PcaEV(required_ev={}, steps={}, prefix={})'.format(
             self.required_ev, self.steps, self.prefix)
+
+    def __repr__(self):
+        return self.__str__()
 
     def set_params(self, **kwargs):
         if 'required_ev' in kwargs:
