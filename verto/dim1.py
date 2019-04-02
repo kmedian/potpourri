@@ -15,7 +15,7 @@ meta = {
     'keywords': [
         'dimensionality reduction', 'principal component anlysis',
         'StandardScaler', 'PCA'],
-    'feature_names_prefix': 'pca'
+    'feature_names_prefix': 'dim_pca'
 }
 
 

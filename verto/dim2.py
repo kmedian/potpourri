@@ -17,7 +17,7 @@ meta = {
     'keywords': [
         'dimensionality reduction', 'principal component anlysis',
         'StandardScaler', 'PCA', 'Minka MLE'],
-    'feature_names_prefix': 'minka'
+    'feature_names_prefix': 'dim_minka'
 }
 
 

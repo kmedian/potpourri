@@ -83,7 +83,7 @@ meta = {
     'keywords': [
         'dimensionality reduction', 'principal component anlysis',
         'StandardScaler', 'PCA', 'Explained Variance'],
-    'feature_names_prefix': 'pcaev'
+    'feature_names_prefix': 'dim_ev'
 }
 
 
