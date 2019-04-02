@@ -1,4 +1,10 @@
-# 0.1.4 / 2019-04-30
+# 0.2.0 / 2019-04-02
+
+  * specified how to generate feature names in verto
+  * `verto.dim1` added
+  * `seasalt.create_feature_names` and `verto` code adjusted to it
+
+# 0.1.4 / 2019-03-30
 
   * Fix #2 -- pretty summary
 
