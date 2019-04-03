@@ -1,3 +1,7 @@
+# 0.3.0 / 2019-04-03
+
+  * verto.PcaModelSelect, verto.dim4, dim5, dim5 added
+
 # 0.2.0 / 2019-04-02
 
   * specified how to generate feature names in verto
