@@ -34,11 +34,13 @@ class PcaModelSelect(Pipeline):
         4. Check if model selection criteria improves
         5. If not, terminate backtracking; Else got to 1
     """
-    def __init__(self, score='bic', tol=1e-3, verbose=False, max_iter=None):
+    def __init__(self, score='bic', tol=1e-3, verbose=False, max_iter=None,
+                 alpha=1.0):
         self.score = score
         self.tol = tol
         self.verbose = verbose
         self.max_iter = max_iter
+        self.alpha = alpha
         super().__init__(steps=[
             ('scl', StandardScaler(with_mean=True, with_std=True, copy=True)),
             ('pca', PCA(
@@ -75,7 +77,7 @@ class PcaModelSelect(Pipeline):
 
             # run Logistic Regression
             lr = sm.Logit(y, sm.add_constant(X_new)).fit_regularized(
-                method='l1', alpha=1.0, disp=0)
+                method='l1', alpha=self.alpha, disp=0)
 
             # read current score (target fun value to minimize)
             curr = getattr(lr, self.score)

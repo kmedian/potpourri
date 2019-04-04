@@ -1,3 +1,7 @@
+# 0.3.1 / 2019-04-04
+
+  * allow to set L1 alpha in verto.dim4.PcaModelSelect
+
 # 0.3.0 / 2019-04-03
 
   * verto.PcaModelSelect, verto.dim4, dim5, dim5 added
