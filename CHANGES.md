@@ -1,3 +1,8 @@
+# 0.4.0 / 2019-04-05
+
+  * Binning transformer verto.pdf1.HistDensity to estimate
+    the PDF of a certain value.
+
 # 0.3.1 / 2019-04-04
 
   * allow to set L1 alpha in verto.dim4.PcaModelSelect
