@@ -1,3 +1,7 @@
+# 0.5.0 / 2019-04-11
+
+  * Isolation Forest added as verto.out1. Use anomaly score as feature
+
 # 0.4.0 / 2019-04-05
 
   * Binning transformer verto.pdf1.HistDensity to estimate
