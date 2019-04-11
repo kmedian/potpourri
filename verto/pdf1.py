@@ -2,6 +2,14 @@ from sklearn.base import BaseEstimator, TransformerMixin
 import numpy as np
 
 
+def getidx(i, n_bins):
+    return min(i - 1, n_bins - 1)
+
+
+def lookup(h, b, X, n_bins):
+    return [h[getidx(np.searchsorted(b, xi), n_bins)] for xi in X]
+
+
 class HistDensity(BaseEstimator, TransformerMixin):
     def __init__(self, bins=512):
         self.n_bins = bins
@@ -22,12 +30,14 @@ class HistDensity(BaseEstimator, TransformerMixin):
         n_features = self.hist_density_.shape[1]
         output = np.empty(shape=X.shape)
         # lookup densities from fitted histograms
-        getidx = lambda i: min(i - 1, self.n_bins - 1)
-        lookup = lambda h, b, X: [
-            h[getidx(np.searchsorted(b, xi))] for xi in X]
+        # getidx=lambda i: min(i - 1, self.n_bins - 1)
+        # lookup=lambda h, b, X: [h[getidx(np.searchsorted(b,xi))] for xi in X]
         for j in range(n_features):
             output[:, j] = lookup(
-                self.hist_density_[:, j], self.bin_edges_[:, j], X[:, j])
+                self.hist_density_[:, j],
+                self.bin_edges_[:, j],
+                X[:, j],
+                self.n_bins)
         return output
 
 
