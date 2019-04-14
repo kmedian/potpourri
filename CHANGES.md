@@ -1,3 +1,7 @@
+# 0.6.0 / 2019-04-14
+
+  * QuantileTransformer added
+
 # 0.5.0 / 2019-04-11
 
   * Isolation Forest added as verto.out1. Use anomaly score as feature

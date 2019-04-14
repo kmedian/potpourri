@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='potpourri',
-    version='0.5.0',
+    version='0.6.0',
     description='model zoo of different preconfigured algorithms',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
