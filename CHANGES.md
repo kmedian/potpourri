@@ -1,5 +1,9 @@
 # 0.6.0 / 2019-04-14
 
+  * OneHot encoded KMeans as feature
+
+# 0.6.0 / 2019-04-14
+
   * QuantileTransformer added
 
 # 0.5.0 / 2019-04-11
