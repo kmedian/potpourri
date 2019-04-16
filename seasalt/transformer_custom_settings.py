@@ -1,5 +1,5 @@
 import re
-import itertools
+import itertools as it
 import numpy as np
 from seasalt import create_feature_names
 
@@ -21,4 +21,4 @@ def transformer_custom_settings(X, y=None, fit=True, names=True):
                 f.append(create_feature_names(
                     globals()[sm]['feature_names_prefix'], Z_tmp.shape[1]))
 
-    return np.hstack(Z), list(itertools.chain.from_iterable(f))
+    return np.concatenate(Z, axis=1), list(it.chain.from_iterable(f))

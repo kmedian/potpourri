@@ -1,3 +1,7 @@
+# 0.9.2 / 2019-04-16
+
+  * hstack replaced by concatenate in transformer_custom_settings b/c it throws error in production
+
 # 0.9.1 / 2019-04-16
 
   * loading error fixed
