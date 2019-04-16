@@ -1,3 +1,7 @@
+# 0.8.1 / 2019-04-16
+
+  * verto.gnb1 renamed as verto.nb1
+
 # 0.8.0 / 2019-04-16
 
   * MultiOutputClassifier2 that can handle fit_params

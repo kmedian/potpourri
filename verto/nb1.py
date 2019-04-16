@@ -38,12 +38,12 @@ class SimpleGNB(BaseEstimator, TransformerMixin):
 trans = SimpleGNB()
 
 meta = {
-    'id': 'gnb1',
+    'id': 'nb1',
     'name': 'Simple GNBs',
     'description': (
         "Fit each combination of target and feature as a "
         "simple Naive Bayes model, and use the predictions "
         "as features."),
     'keywords': ['GaussianNB', 'naive bayes'],
-    'feature_names_prefix': 'gnb'
+    'feature_names_prefix': 'nb'
 }
