@@ -1,4 +1,8 @@
-# 0.6.0 / 2019-04-14
+# 0.8.0 / 2019-04-16
+
+  * MultiOutputClassifier2 that can handle fit_params
+
+# 0.7.0 / 2019-04-14
 
   * OneHot encoded KMeans as feature
 
