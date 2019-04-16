@@ -1,3 +1,7 @@
+# 0.9.0 / 2019-04-16
+
+  * read "trans*" objects from globals to merge multiple transformers with seasalt.transformer_custom_settings
+
 # 0.8.1 / 2019-04-16
 
   * verto.gnb1 renamed as verto.nb1
