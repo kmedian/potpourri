@@ -1,6 +1,7 @@
 # 0.8.0 / 2019-04-16
 
   * MultiOutputClassifier2 that can handle fit_params
+  * verto.rnd1.RandomFeature for Feature Importance analysis
 
 # 0.7.0 / 2019-04-14
 
