@@ -2,6 +2,7 @@
 
   * MultiOutputClassifier2 that can handle fit_params
   * verto.rnd1.RandomFeature for Feature Importance analysis
+  * verto.gnb1.SimpleGNB to fit simple NB models and use predictions as features
 
 # 0.7.0 / 2019-04-14
 
