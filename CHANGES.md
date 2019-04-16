@@ -1,4 +1,8 @@
-# 0.9.2 / 2019-04-16
+# 0.10.0 / 2019-04-17
+
+  * verto.raw1 to copy the raw features with mlxtend's CopyTransformer
+
+# 0.9.2 / 2019-04-17
 
   * hstack replaced by concatenate in transformer_custom_settings b/c it throws error in production
 

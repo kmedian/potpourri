@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name='potpourri',
-    version='0.9.2',
+    version='0.10.0',
     description='model zoo of different preconfigured algorithms',
     long_description=read('README.md'),
     long_description_content_type='text/markdown',
@@ -32,7 +32,8 @@ setup(
         'lightgbm>=2.2.2',
         'sklearn-lvq>=1.1.0',
         'umap-learn>=0.3.7',
-        'MulticoreTSNE>=0.0.1.1'],
+        'MulticoreTSNE>=0.0.1.1',
+        'mlxtend>=0.14.0'],
     python_requires='>=3.6',
     zip_safe=False
 )
