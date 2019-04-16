@@ -5,3 +5,4 @@ from .select_the_best import select_the_best
 from .create_feature_names import create_feature_names
 from .multi_output_classifier2 import MultiOutputClassifier2
 from .transformer_custom_settings import transformer_custom_settings
+from .transformer_default_settings import transformer_default_settings
