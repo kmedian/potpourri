@@ -1,3 +1,7 @@
+# 0.10.1 / 2019-04-17
+
+  * Fixed the globals() issue in transformer_custom_settings
+  
 # 0.10.0 / 2019-04-17
 
   * verto.raw1 to copy the raw features with mlxtend's CopyTransformer
