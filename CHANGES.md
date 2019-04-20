@@ -1,3 +1,7 @@
+# 0.12.0 / 2019-04-20
+
+  * seasalt.MultiBinaryToMultiClass added
+
 # 0.11.0 / 2019-04-17
 
   * explicit mechansim to load verto transformers with default settings
