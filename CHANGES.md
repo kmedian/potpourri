@@ -1,3 +1,7 @@
+# 0.12.1 / 2019-04-21
+
+  * wrong stacking fixed in seasalt.MultiOutputClassifier2.fit
+
 # 0.12.0 / 2019-04-20
 
   * seasalt.MultiBinaryToMultiClass added
