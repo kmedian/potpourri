@@ -36,7 +36,7 @@ class MultiOutputClassifier2(BaseEstimator, ClassifierMixin):
 
     def predict(self, X):
         tmp = [estim.predict(X) for estim in self.estimators_]
-        return np.hstack(tmp)
+        return np.stack(tmp, axis=1)
 
     def score(self, X, y):
         y_pred = self.predict(X)
