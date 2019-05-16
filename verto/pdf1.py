@@ -22,7 +22,7 @@ class HistDensity(BaseEstimator, TransformerMixin):
         # compute histogram for each feature
         for j in range(n_features):
             self.hist_density_[:, j], self.bin_edges_[:, j] = np.histogram(
-                X[:, j], bins=self.n_bins, density=True)
+                X[~np.isnan(X[:, j]), j], bins=self.n_bins, density=True)
         return self
 
     def transform(self, X, y=None):

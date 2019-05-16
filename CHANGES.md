@@ -1,3 +1,7 @@
+# 0.12.2 / 2019-05-16
+
+  * ignore NaN while fitting pdf1.HistDensity
+
 # 0.12.1 / 2019-04-21
 
   * wrong stacking fixed in seasalt.MultiOutputClassifier2.fit
