@@ -7,3 +7,4 @@ from .multi_output_classifier2 import MultiOutputClassifier2
 from .transformer_custom_settings import transformer_custom_settings
 from .transformer_default_settings import TransformerDefaultSettings
 from .multi_binary_to_multi_class import MultiBinaryToMultiClass
+from .proba_transformer import ProbaTransformer

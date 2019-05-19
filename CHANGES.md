@@ -1,3 +1,7 @@
+# 0.13.0 / 2019-05-19
+
+  * seasalt.ProbaTransformer added
+
 # 0.12.2 / 2019-05-16
 
   * ignore NaN while fitting pdf1.HistDensity
