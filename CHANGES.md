@@ -1,3 +1,7 @@
+# 0.13.1 / 2019-05-20
+
+  * speed up transform of pdf1.HistDensity
+
 # 0.13.0 / 2019-05-19
 
   * seasalt.ProbaTransformer added
