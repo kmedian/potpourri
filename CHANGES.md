@@ -1,3 +1,7 @@
+# 0.13.3 / 2019-05-20
+
+  * circumvent BUG in sklearn's cross_validate, RandomizedSearchCV
+
 # 0.13.2 / 2019-05-20
 
   * circumvent BUG in sklearn's cross_validate (doesn't copy attributes)

@@ -13,32 +13,31 @@ class HistDensity(BaseEstimator, TransformerMixin):
         self.n_bins = bins
 
     def fit(self, X, y=None):
-        # circumvent BUG in sklearn's cross_validate (doesn't copy attributes)
-        if self.n_bins is None:
-            self.n_bins = 512
+        # circumvent BUG in sklearn's cross_validate, RandomizedSearchCV
+        bins_tmp = self.n_bins if self.n_bins else 512
         # declare variables
         n_features = X.shape[1]
-        self.hist_density_ = np.empty(shape=(self.n_bins, n_features))
-        self.bin_edges_ = np.empty(shape=(self.n_bins + 1, n_features))
+        self.hist_density_ = np.empty(shape=(bins_tmp, n_features))
+        self.bin_edges_ = np.empty(shape=(bins_tmp + 1, n_features))
         # compute histogram for each feature
         for j in range(n_features):
             self.hist_density_[:, j], self.bin_edges_[:, j] = np.histogram(
-                X[~np.isnan(X[:, j]), j], bins=self.n_bins, density=True)
+                X[~np.isnan(X[:, j]), j], bins=bins_tmp, density=True)
         return self
 
     def transform(self, X, y=None):
+        # circumvent BUG in sklearn's cross_validate, RandomizedSearchCV
+        bins_tmp = self.n_bins if self.n_bins else 512
         # declare variables
         n_features = self.hist_density_.shape[1]
         output = np.empty(shape=X.shape)
         # lookup densities from fitted histograms
-        # getidx=lambda i: min(i - 1, self.n_bins - 1)
-        # lookup=lambda h, b, X: [h[getidx(np.searchsorted(b,xi))] for xi in X]
         for j in range(n_features):
             output[:, j] = lookup(
                 self.hist_density_[:, j],  # h
                 self.bin_edges_[:, j],  # b
                 X[:, j],  # X
-                self.n_bins)
+                bins_tmp)
         return output
 
 
