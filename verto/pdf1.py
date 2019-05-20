@@ -13,6 +13,9 @@ class HistDensity(BaseEstimator, TransformerMixin):
         self.n_bins = bins
 
     def fit(self, X, y=None):
+        # circumvent BUG in sklearn's cross_validate (doesn't copy attributes)
+        if self.n_bins is None:
+            self.n_bins = 512
         # declare variables
         n_features = X.shape[1]
         self.hist_density_ = np.empty(shape=(self.n_bins, n_features))
