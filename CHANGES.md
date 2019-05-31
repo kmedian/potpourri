@@ -1,3 +1,7 @@
+# 0.14.0 / 2019-05-31
+
+  * Probability Recalibration added
+
 # 0.13.3 / 2019-05-20
 
   * circumvent BUG in sklearn's cross_validate, RandomizedSearchCV
